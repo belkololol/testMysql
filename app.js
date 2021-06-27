@@ -3,6 +3,7 @@ const express = require("express");
 // const bodyParser = require("body-parser");
 
 const app = express();
+const port = process.env.PORT || 3000;
 // const urlencodedParser = bodyParser.urlencoded({extended: false});
 
 const pool = mysql.createPool({
@@ -22,7 +23,6 @@ app.get('/tasks', function (req, res) {
     });
 });
 
-
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log("Сервер ожидает подключения...");
 });
