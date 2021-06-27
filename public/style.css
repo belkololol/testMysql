@@ -1,0 +1,78 @@
+::-webkit-scrollbar { /* chrome based */
+    width: 0px; /* width scrollbar */
+    background: transparent; /* опционально */
+}
+
+html {
+    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+body, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.tasks {
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background-color: #52386c;
+    width: 120px;
+    font-weight: 600;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    box-shadow: 0px 2px 5px 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+.tableTasks {
+    margin-top: 35px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tableTasks > tbody {
+    border-bottom: 10px solid #52386c;
+}
+
+.tableTasks th {
+    background: #52386c;
+    color: white;
+    padding: 15px 30px;
+}
+
+.tableTasks td {
+    padding: 10px 35px;
+    border-bottom: 1px solid gray;
+}
+
+.tableTasks.active {
+    opacity: 1;
+}
+
+.tableTasks tr:nth-child(even) {
+    background: #f8f8f8;
+    color: #52386c;
+}
+
+.tableTasks tr:hover {
+    font-weight: 600;
+}
